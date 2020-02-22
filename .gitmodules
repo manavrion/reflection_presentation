@@ -4,3 +4,6 @@
 [submodule "submodules/range-v3"]
 	path = submodules/range-v3
 	url = https://github.com/ericniebler/range-v3.git
+[submodule "submodules/magic_get"]
+	path = submodules/magic_get
+	url = https://github.com/apolukhin/magic_get
