@@ -16,22 +16,19 @@ jobs:
         source: src
 
     - name: Install snap
-      run: sudo bash .github/workflows/install_snap.sh
-
-    - name: Install compiler
-      run: sudo bash .github/workflows/install_compiler.sh
+      run: sudo bash scripts/install_snap.sh
 
     - name: Init submodule
       run: git submodule update --init --recursive
 
-    - name: Bootstrap
-      run: .github/workflows/bootstrap.sh
+    - name: Prepare compiler
+      run: bash prepare_compiler.sh
 
-    - name: Install gtest # just fix Ci
-      run: sudo bash install_deps.sh
+    - name: Bootstrap
+      run: CMAKE_BIN="snap run cmake" bash bootstrap.sh
 
     - name: Build
-      run: .github/workflows/build.sh
+      run: CMAKE_BIN="snap run cmake" bash build.sh
 
     - name: Test
       run: build/src/unittests/unittests

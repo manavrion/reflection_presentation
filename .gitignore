@@ -33,6 +33,7 @@
 
 # Build
 build
+compiler
 
 # IDEs
 .vscode
