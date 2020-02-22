@@ -8,4 +8,7 @@ find_package(GTest REQUIRED)
 # The code uses the root folder to #include
 include_directories("src/")
 
+# magic_get
+include_directories(${MAGIC_GET_INSTALL_DIR})
+
 add_subdirectory(src)

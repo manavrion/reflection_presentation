@@ -21,3 +21,5 @@ fi
 source scripts/flags_gtest.sh
 
 source scripts/flags_rangev3.sh
+
+source scripts/flags_magic_get.sh
