@@ -10,11 +10,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
-    - name: Lint with clang-format
-      uses: DoozyX/clang-format-lint-action@v0.4.1
-      with:
-        source: src
-
     - name: Install snap
       run: sudo bash scripts/install_snap.sh
 
