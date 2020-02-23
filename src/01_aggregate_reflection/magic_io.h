@@ -19,12 +19,11 @@ namespace magic_io {
 template <typename Char, typename Traits, typename T>
 auto& operator<<(std::basic_ostream<Char, Traits>& out, const T& value) {
   out << '{';
-  auto tie = magic::tie_as_tuple(value);
-  detail::for_each(tie,
-                   overloaded{[&](auto&& arg) { out << arg << ", "; },
-                              [&](const std::basic_string<Char, Traits>& arg) {
-                                out << "\"" << arg << "\", ";
-                              }});
+  detail::for_each_by_members(
+      value, overloaded{[&](auto&& arg) { out << arg << ", "; },
+                        [&](const std::basic_string<Char, Traits>& arg) {
+                          out << "\"" << arg << "\", ";
+                        }});
   out << '}';
   return out;
 }
