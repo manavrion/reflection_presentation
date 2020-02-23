@@ -1,18 +1,15 @@
 # Tools
-set(CMAKE_C_COMPILER clang-10)
+set(CMAKE_C_COMPILER ${COMPILER_DIR}/bin/clang)
 
-set(CMAKE_CXX_COMPILER clang++-10)
+set(CMAKE_CXX_COMPILER ${COMPILER_DIR}/bin/clang++)
 
-set(CMAKE_AR llvm-ar-10)
-set(CMAKE_LINKER llvm-link-10)
-set(CMAKE_NM llvm-nm-10)
-set(CMAKE_OBJDUMP llvm-objdump-10)
-set(CMAKE_RANLIB llvm-ranlib-10)
+set(CMAKE_AR ${COMPILER_DIR}/bin/llvm-ar)
+set(CMAKE_LINKER ${COMPILER_DIR}/bin/llvm-link)
+set(CMAKE_NM ${COMPILER_DIR}/bin/llvm-nm)
+set(CMAKE_OBJDUMP ${COMPILER_DIR}/bin/llvm-objdump)
+set(CMAKE_RANLIB ${COMPILER_DIR}/bin/llvm-ranlib)
 
 # Build
-set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_BUILD_TYPE ${BUILD_TYPE})
 
-# C++
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_CXX_FLAGS "-std=c++2a -freflection -I${COMPILER_DIR}/include")
