@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
 project(src)
 
-add_subdirectory(01_aggregate)
+add_subdirectory(01_aggregate_magic_get)
 
