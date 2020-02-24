@@ -2,6 +2,9 @@
 #include <experimental/compiler>
 #include <experimental/meta>
 
+#define METHOD(_CLASS, _METHOD, _RES, _ARGS) \
+  static_cast<_RES(_CLASS::*) _ARGS>(&_CLASS::_METHOD)
+
 namespace meta = std::experimental::meta;
 
 template <typename... Ts>
@@ -15,8 +18,7 @@ consteval void insert_mock(meta::info member, pack_t<Args...>) {
         return unqualid(meta::name_of(member),
                         "_impl")(std::forward<Args>(arg)...);
       }
-      this->VisitMethod(
-          static_cast<R (T::*)(Args...)>(&T::unqualid(meta::name_of(member))));
+      this->VisitMethod(METHOD(T, unqualid(meta::name_of(member)), R, (Args...)));
       return R();
     }
   };

@@ -1,9 +1,6 @@
 #pragma once
 #include "mockable_impl_insert_mock_details.h"
 
-#define METHOD(_CLASS, _METHOD, _RES, _ARGS) \
-  static_cast<_RES(_CLASS::*) _ARGS>(&_CLASS::_METHOD)
-
 template <typename T>
 size_t address_of_method(T t) {
   return (size_t) reinterpret_cast<void *&>(t);
