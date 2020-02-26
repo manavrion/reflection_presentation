@@ -3,4 +3,4 @@ project(src)
 
 add_subdirectory(01_aggregate_magic_get)
 add_subdirectory(01_aggregate_reflection)
-add_subdirectory(06_without_gmock)
+add_subdirectory(05_without_gmock)
