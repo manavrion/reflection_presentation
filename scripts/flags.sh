@@ -19,9 +19,7 @@ if [ ! -v BUILD_TYPE ]; then
 fi
 
 source scripts/flags_gtest.sh
-
-source scripts/flags_rangev3.sh
-
-source scripts/flags_magic_get.sh
-
 source scripts/flags_json.sh
+source scripts/flags_magic_get.sh
+source scripts/flags_protobuf.sh
+source scripts/flags_rangev3.sh

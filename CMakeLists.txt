@@ -8,10 +8,14 @@ include_directories("src/")
 enable_testing()
 find_package(GTest REQUIRED)
 
+# Json
+include_directories(${NJSON_INCLUDE_DIR})
+
 # magic_get
 include_directories(${MAGIC_GET_INSTALL_DIR})
 
-# Json
-include_directories(${NJSON_INCLUDE_DIR})
+# Protobuf
+find_package(Protobuf REQUIRED
+  HINTS submodules/protobuf/cmake/build/install)
 
 add_subdirectory(src)
