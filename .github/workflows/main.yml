@@ -25,5 +25,5 @@ jobs:
     - name: Build
       run: CMAKE_BIN="snap run cmake" bash build.sh
 
-#   - name: Test
-#     run: build/src/unittests/unittests
+   - name: Test
+     run: build/src/05_without_gmock/05_without_gmock
