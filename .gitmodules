@@ -7,3 +7,6 @@
 [submodule "submodules/magic_get"]
 	path = submodules/magic_get
 	url = https://github.com/apolukhin/magic_get
+[submodule "submodules/json"]
+	path = submodules/json
+	url = https://github.com/nlohmann/json
