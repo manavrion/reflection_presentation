@@ -21,7 +21,6 @@ if(result)
 endif()
 
 set(JSON_BuildTests OFF)
-set(JSON_Install OFF)
 
 add_subdirectory(
   ${CMAKE_CURRENT_BINARY_DIR}/nlohmann_json-src
