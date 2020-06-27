@@ -10,8 +10,8 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
-    - name: Prepare compiler
-      run: bash prepare_compiler.sh
+    - name: Install compiler
+      run: bash install_compiler.sh
 
     - name: Build
         run: bash build.sh
