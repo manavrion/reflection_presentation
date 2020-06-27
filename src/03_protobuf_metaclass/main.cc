@@ -7,7 +7,7 @@ using magic_proto::proto_message;
 struct(proto_message) User {
   //std::string name;
   //std::string status;
-  uint64_t age;
+  int32_t age;
 };
 
 int main() {

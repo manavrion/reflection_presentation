@@ -4,7 +4,7 @@
 struct User {
   std::string name;
   std::string status;
-  uint64_t age;
+  int age;
 };
 
 void to_json(nlohmann::json& json, const User& user) {
