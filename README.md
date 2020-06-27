@@ -1,10 +1,9 @@
-# Sample repository for C++ SIBERIA 2020 and C++ Russia 2020
+# Sample repository for C++ Russia 2020
 
 # How to build
 
-1. git clone --recursive git@github.com:manavrion/reflection_presentation.git
-2. ./prepare_compiler.sh
-2. ./bootstrap.sh
+1. git clone git@github.com:manavrion/reflection_presentation.git
+2. ./install_compiler.sh
 3. ./build.sh
 
 # How to test
