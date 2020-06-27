@@ -12,8 +12,4 @@ set(CMAKE_RANLIB ${COMPILER_DIR}/bin/llvm-ranlib)
 
 # Build
 set(CMAKE_BUILD_TYPE Debug)
-
 set(CMAKE_CXX_FLAGS "-std=c++2a -freflection -I${COMPILER_DIR}/include")
-
-# C++
-set(CMAKE_CXX_STANDARD 20)
