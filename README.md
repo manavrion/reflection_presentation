@@ -1,4 +1,4 @@
-# Sample repository for C++ SIBERIA 2020
+# Sample repository for C++ SIBERIA 2020 and C++ Russia 2020
 
 # How to build
 
