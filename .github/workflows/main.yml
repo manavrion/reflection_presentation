@@ -10,20 +10,26 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
-    - name: Install snap
-      run: sudo bash scripts/install_snap.sh
-
-    - name: Init submodule
-      run: git submodule update --init --recursive
-
     - name: Prepare compiler
       run: bash prepare_compiler.sh
 
-    - name: Bootstrap
-      run: CMAKE_BIN="snap run cmake" bash bootstrap.sh
-
     - name: Build
-      run: CMAKE_BIN="snap run cmake" bash build.sh
+        run: bash build.sh
 
-    - name: Test
-      run: build/src/04_without_gmock/04_without_gmock
+#    - name: Install snap
+#      run: sudo bash scripts/install_snap.sh
+#
+#    - name: Init submodule
+#      run: git submodule update --init --recursive
+#
+#    - name: Prepare compiler
+#      run: bash prepare_compiler.sh
+#
+#    - name: Bootstrap
+#      run: CMAKE_BIN="snap run cmake" bash bootstrap.sh
+#
+#    - name: Build
+#      run: CMAKE_BIN="snap run cmake" bash build.sh
+#
+#    - name: Test
+#      run: build/src/04_without_gmock/04_without_gmock

@@ -2,7 +2,7 @@
 
 # How to build
 
-1. git clone --recursive git@github.com:manavrion/siberia_2020.git
+1. git clone --recursive git@github.com:manavrion/reflection_presentation.git
 2. ./prepare_compiler.sh
 2. ./bootstrap.sh
 3. ./build.sh

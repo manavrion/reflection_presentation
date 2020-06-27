@@ -1,21 +1,22 @@
 cmake_minimum_required(VERSION 3.8)
-project(template_repository)
 
-# The code uses the root folder to #include
-include_directories("src/")
+include(toolchain.cmake)
 
-# Google test
+project(reflection_presentation)
+
+# Export dependencies
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON) # Export compilation data-base
+set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+
+include(gtest)
+include(magic_get)
+include(nlohmann_json)
+include(protobuf)
+include(rangev3)
+
 enable_testing()
-find_package(GTest REQUIRED)
 
-# Json
-include_directories(${NJSON_INCLUDE_DIR})
-
-# magic_get
-include_directories(${MAGIC_GET_INSTALL_DIR})
-
-# Protobuf
-find_package(Protobuf REQUIRED
-  HINTS submodules/protobuf/cmake/build/install)
+include_directories("src/")
 
 add_subdirectory(src)

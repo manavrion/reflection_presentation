@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.8)
+
+project(magic_get-download NONE)
+
+include(ExternalProject)
+ExternalProject_Add(
+  magic_get
+  GIT_REPOSITORY https://github.com/apolukhin/magic_get.git
+  GIT_TAG develop
+  SOURCE_DIR "${CMAKE_CURRENT_BINARY_DIR}/magic_get-src"
+  BINARY_DIR "${CMAKE_CURRENT_BINARY_DIR}/magic_get-build"
+  CONFIGURE_COMMAND ""
+  BUILD_COMMAND ""
+  INSTALL_COMMAND ""
+  TEST_COMMAND "")
