@@ -1,5 +1,5 @@
 # Tools
-set(COMPILER_DIR ${CMAKE_CURRENT_SOURCE_DIR}/compiler/install)
+set(COMPILER_DIR ${CMAKE_CURRENT_SOURCE_DIR}/.compiler/install)
 
 set(CMAKE_C_COMPILER ${COMPILER_DIR}/bin/clang)
 set(CMAKE_CXX_COMPILER ${COMPILER_DIR}/bin/clang++)
