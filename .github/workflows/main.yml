@@ -4,17 +4,16 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+      - uses: actions/checkout@v1
 
-    - name: Install compiler
-      run: bash install_compiler.sh
+      - name: Install compiler
+        run: bash install_compiler.sh
 
-    - name: Build
+      - name: Build
         run: bash build.sh
 
-    - name: Test
+      - name: Test
         run: bash test.sh
