@@ -1,6 +1,7 @@
 # Tools
-set(CMAKE_C_COMPILER ${COMPILER_DIR}/bin/clang)
+set(COMPILER_DIR ${CMAKE_CURRENT_SOURCE_DIR}/.compiler/install)
 
+set(CMAKE_C_COMPILER ${COMPILER_DIR}/bin/clang)
 set(CMAKE_CXX_COMPILER ${COMPILER_DIR}/bin/clang++)
 
 set(CMAKE_AR ${COMPILER_DIR}/bin/llvm-ar)
@@ -10,6 +11,5 @@ set(CMAKE_OBJDUMP ${COMPILER_DIR}/bin/llvm-objdump)
 set(CMAKE_RANLIB ${COMPILER_DIR}/bin/llvm-ranlib)
 
 # Build
-set(CMAKE_BUILD_TYPE ${BUILD_TYPE})
-
+set(CMAKE_BUILD_TYPE Debug)
 set(CMAKE_CXX_FLAGS "-std=c++2a -freflection -I${COMPILER_DIR}/include")

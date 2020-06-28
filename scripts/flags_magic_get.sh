@@ -1,4 +1,0 @@
-#!/bin/bash
-
-export MAGIC_GET_REPOSITORY_DIR=$ROOT_REPOSITORY_DIR/submodules/magic_get
-export MAGIC_GET_INSTALL_DIR=$MAGIC_GET_REPOSITORY_DIR/include

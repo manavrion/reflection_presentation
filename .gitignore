@@ -32,8 +32,8 @@
 *.app
 
 # Build
-build
-compiler
+.build
+.compiler
 
 # IDEs
 .vscode

@@ -4,26 +4,16 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+      - uses: actions/checkout@v1
 
-    - name: Install snap
-      run: sudo bash scripts/install_snap.sh
+      - name: Install compiler
+        run: bash install_compiler.sh
 
-    - name: Init submodule
-      run: git submodule update --init --recursive
+      - name: Build
+        run: bash build.sh
 
-    - name: Prepare compiler
-      run: bash prepare_compiler.sh
-
-    - name: Bootstrap
-      run: CMAKE_BIN="snap run cmake" bash bootstrap.sh
-
-    - name: Build
-      run: CMAKE_BIN="snap run cmake" bash build.sh
-
-    - name: Test
-      run: build/src/04_without_gmock/04_without_gmock
+      - name: Test
+        run: bash test.sh

@@ -1,8 +1,0 @@
-#!/bin/bash
-
-export RANGEV3_REPOSITORY_DIR=$ROOT_REPOSITORY_DIR/submodules/range-v3
-export RANGEV3_BUILD_DIR=$RANGEV3_REPOSITORY_DIR/build
-export RANGEV3_INSTALL_DIR=$RANGEV3_REPOSITORY_DIR/build/install
-export RANGEV3_INCLUDE_DIR=$RANGEV3_REPOSITORY_DIR/build/install/include
-
-# Cmake details

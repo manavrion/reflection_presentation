@@ -8,7 +8,7 @@ struct overloaded : Ts... {
   using Ts::operator()...;
 };
 template <class... Ts>
-overloaded(Ts...) -> overloaded<Ts...>;  // not needed as of C++20
+overloaded(Ts...) -> overloaded<Ts...>;
 
 namespace magic_io::magic {
 using boost::pfr::detail::tie_as_tuple;

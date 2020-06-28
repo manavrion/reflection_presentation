@@ -8,7 +8,7 @@ using namespace magic_io;
 struct User {
   std::string name;
   std::string status;
-  uint64_t age;
+  int age;
 };
 
 int main() {
