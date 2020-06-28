@@ -6,5 +6,3 @@ set(SOURCE_FILES main.cc)
 source_group("sources" FILES ${SOURCE_FILES})
 
 add_executable(02_json ${SOURCE_FILES})
-
-target_link_libraries(02_json PRIVATE nlohmann_json::nlohmann_json)

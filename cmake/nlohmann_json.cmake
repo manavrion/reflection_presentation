@@ -20,8 +20,4 @@ if(result)
   message(FATAL_ERROR "Build step for nlohmann_json failed: ${result}")
 endif()
 
-set(JSON_BuildTests OFF)
-
-add_subdirectory(
-  ${CMAKE_CURRENT_BINARY_DIR}/nlohmann_json-src
-  ${CMAKE_CURRENT_BINARY_DIR}/nlohmann_json-build EXCLUDE_FROM_ALL)
+include_directories(${CMAKE_CURRENT_BINARY_DIR}/nlohmann_json-src/include)
